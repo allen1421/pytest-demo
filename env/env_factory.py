@@ -1,11 +1,10 @@
 import yaml
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 class ENV:
-    with open(BASE_DIR+r'\config\config-dev.yaml') as file:
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    with open(BASE_DIR + r'\config\config-dev.yaml') as file:
         try:
             dict = yaml.load(file, yaml.FullLoader)
             print(dict)
