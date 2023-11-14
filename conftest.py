@@ -7,7 +7,7 @@ import pytest
 import os
 import sys
 
-sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__))+r'\env')))
+sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__))+r'/env')))
 print(sys.path)
 from env.env_factory import ENV
 from loguru import logger
