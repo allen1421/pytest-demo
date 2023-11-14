@@ -14,7 +14,7 @@ sys.path.append(current_dir)
 
 # 添加 env 包的路径到 sys.path
 sys.path.append(os.path.abspath(os.path.join(current_dir, "env")))
-
+print(sys.path)
 
 from env.env_factory import ENV
 from loguru import logger
