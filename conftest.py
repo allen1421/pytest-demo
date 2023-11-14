@@ -4,6 +4,11 @@ import base64
 from PIL import Image
 import io
 import pytest
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.dirname(__file__)) + r'\env')
+# print("env目录" + os.path.abspath(os.path.dirname(__file__)) + r'\env')
 from env.env_factory import ENV
 from loguru import logger
 
@@ -12,7 +17,7 @@ from loguru import logger
 def login_and_get_session():
     # 定义登陆重试次数
     num = 0
-    while num <= 5:
+    while num <= 1:
         try:
             logger.info('开始获取token~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
             username = ENV.username
