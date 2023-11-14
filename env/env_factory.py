@@ -1,11 +1,7 @@
 import yaml
 import os
-import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__)))))
-print(sys.path)
 
 
 class ENV:

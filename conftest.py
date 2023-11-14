@@ -6,6 +6,14 @@ import io
 import pytest
 import os
 import sys
+# 获取当前脚本所在目录
+current_dir = os.path.dirname(__file__)
+
+# 添加当前目录到 sys.path
+sys.path.append(current_dir)
+
+# 添加 env 包的路径到 sys.path
+sys.path.append(os.path.abspath(os.path.join(current_dir, "env")))
 
 
 from env.env_factory import ENV
