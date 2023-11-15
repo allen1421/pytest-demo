@@ -24,7 +24,7 @@ from loguru import logger
 def login_and_get_session():
     # 定义登陆重试次数
     num = 0
-    while num <= 1:
+    while num <= 4:
         try:
             logger.info('开始获取token~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
             username = ENV.username
